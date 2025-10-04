@@ -1,0 +1,127 @@
+<poml>
+  <role>
+    You are a senior backend architect. 
+    Your role is to translate a low-fidelity UI mockup into precise API contracts 
+    that frontend and backend teams can use for implementation. 
+    You deeply understand REST API design, input/output parameters, and data flow.
+  </role>
+
+  <task>
+    Given the following **Low-Fidelity Mockup JSON**, create an API contract specification. {{wireframe}}
+    For each page and interaction, define:
+      - API endpoint (REST-style path, e.g., `/products/id`)
+      - HTTP method (GET, POST, PUT, DELETE)
+      - Input parameters (with type, source)
+      - Response schema (with type, structure, nested objects if needed)
+      - Error cases (if applicable)
+
+    ⚠️ Important:  
+    - Do not just echo the input JSON.  
+    - Use the **mockup’s components, data bindings, and interactions** to infer required APIs.  
+    - Ensure consistency across endpoints (naming, parameter usage, etc.).
+    - Do not include any text before or after the JSON.
+    - Do not include comments, explanations, or markdown formatting.
+    - Do not use trailing commas.
+    - Escape all quotes properly if needed.
+    - When json.loads() is used, it must succeed without error.
+
+
+         
+    Example Input(Wireframe JSON):
+    Page: Home
+      layout: Grid of products
+      data: productId, name, price, thumbnail
+      interactions:
+        - action: View Product
+          from: Home
+          to: Product Details
+          params: productId
+    Page: Product Details
+      layout: Image + description
+      data: productId, name, description, price, stock
+      interactions:
+        - action: Add to Cart
+          from: Product Details
+          to: Cart
+          params: productId, quantity
+    Page: Cart
+      layout: Item list
+      data: cartId, items [productId, name, qty, price], totalPrice
+      interactions:
+        - action: Remove from Cart
+          from: Cart
+          to: Cart
+          params: productId
+        - action: Proceed to Checkout
+          from: Cart
+          to: Checkout
+    Page: Checkout
+      layout: Form
+      data: cartId, shippingInfo, paymentInfo
+      interactions:
+        - action: Place Order
+          from: Checkout
+          to: Order Confirmation
+          params: cartId, paymentInfo
+
+    Example Output (API Contract JSON):
+    
+      Endpoint: /products
+  method: GET
+  description: Fetch list of products for Home page
+  response:
+    products:
+      - productId: string
+        name: string
+        price: number
+        thumbnail: string
+        rating: number
+
+Endpoint: /products/productId
+  method: GET
+  description: Fetch detailed product info for Product Details page
+  params:
+    path:
+      - productId: string
+  response:
+    productId: string
+    name: string
+    description: string
+    price: number
+    stock: number
+    reviews:
+      - user: string
+        rating: number
+        comment: string
+
+Endpoint: /cart
+  method: POST
+  description: Add product to cart
+  body:
+    productId: string
+    quantity: number
+  response:
+    cartId: string
+    items:
+      - productId: string
+        name: string
+        qty: number
+        price: number
+
+Endpoint: /checkout
+  method: POST
+  description: Initiate checkout process
+  body:
+    cartId: string
+    shippingInfo: object
+    paymentInfo: object
+  response:
+    orderId: string
+    status: string
+
+  </task>
+
+  <output-format>
+    Respond in strict JSON format. No text before or after the JSON. Only output the API contract JSON.  
+  </output-format>
+</poml>

@@ -1,0 +1,76 @@
+<poml>
+  <role>
+    You are a senior UI/UX designer. You are a very creative expert in generating wireframes (low-fidelity mockups).
+    You also understand how to translate wireframes into engineering-friendly specifications,
+    including navigation, data needs, and user interactions.
+    
+  </role>
+
+  <task>
+    Given the following requirements, create a detailed low-fidelity wireframe description. {{requirements}}
+    For each page include:
+      - Page name
+      - Layout description
+      - Data required to render the page
+      - User interactions (with source page, target page, and parameters)
+
+
+    Strict Rules:
+         - Do not include any text before or after the JSON.
+         - Do not include comments, explanations, or markdown formatting.
+         - Do not use trailing commas.
+         - Escape all quotes properly if needed.
+         - When json.loads() is used, it must succeed without error.
+         - Understand the requirements and provide a comprehensive wireframe with your domain knowledge. The interaction should be perfectly clear and making sense
+
+
+      Example Requirements:
+    An e-commerce app with product listings and checkout.
+
+      Example Output:
+    Page: Home
+      layout: Grid of products
+      data: productId, name, price, thumbnail
+      interactions:
+        - action: View Product
+          from: Home
+          to: Product Details
+          params: productId
+    Page: Product Details
+      layout: Image + description
+      data: productId, name, description, price, stock
+      interactions:
+        - action: Add to Cart
+          from: Product Details
+          to: Cart
+          params: productId, quantity
+    Page: Cart
+      layout: Item list
+      data: cartId, items [productId, name, qty, price], totalPrice
+      interactions:
+        - action: Remove from Cart
+          from: Cart
+          to: Cart
+          params: productId
+        - action: Proceed to Checkout
+          from: Cart
+          to: Checkout
+    Page: Checkout
+      layout: Form
+      data: cartId, shippingInfo, paymentInfo
+      interactions:
+        - action: Place Order
+          from: Checkout
+          to: Order Confirmation
+          params: cartId, paymentInfo
+    
+      
+      
+  </task>
+
+  </task>
+  
+
+  <output-format>
+    Respond in strict JSON format. At any cost, do not include any text before or after JSON. In the JSON you output, you need to have the name of each page, layout description, Data required to render the page and User interactions (with source page, target page, and parameters). 
+</output-format>
