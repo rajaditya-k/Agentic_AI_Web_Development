@@ -120,9 +120,13 @@ Agentic_AI_Web_Development/
 **Raj Aditya Kumar**
 Sr Data Engineer | Passionate about Data Engineering and Autonomous AI Systems
 📧 [adrj0596@gmail.com](mailto:adrj0596@gmail.com)
-🌐 [LinkedIn]([https://linkedin.com/in/rajadityakumar](https://www.linkedin.com/in/rajadityakumar/)) | [GitHub]([https://github.com/your-username](https://github.com/rajaditya-k))
+
+🌐 [LinkedIn]([https://linkedin.com/in/rajadityakumar]) 
+
+    [GitHub]([https://github.com/your-username](https://github.com/rajaditya-k))
 
 ---
+
 
 
 
