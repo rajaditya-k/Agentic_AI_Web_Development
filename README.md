@@ -1,6 +1,3 @@
-Absolutely 👍 — here’s the **ready-to-copy Markdown version** with all grammatical fixes and professional formatting preserved exactly as in your style:
-
----
 
 # 🤖 Objective
 
@@ -154,5 +151,6 @@ Senior Data Engineer | Passionate about Data Engineering and Autonomous AI Syste
 📧 [adrj0596@gmail.com](mailto:adrj0596@gmail.com)
 🌐 [LinkedIn Profile](https://linkedin.com/in/rajadityakumar)
 🌐 [GitHub Repository](https://github.com/rajaditya-k)
+
 
 
