@@ -1,4 +1,7 @@
 
+# 🤖 Objective
+
+The objective of this project is to check the feasibility of leveraging **Agentic AI** as a development partner in full-stack web development by automating the traditional development workflow. 
 
 # 🤖 Agentic Full-Stack Web Development Automation
 
@@ -12,6 +15,15 @@ The project demonstrates how autonomous AI agents can collaboratively handle eac
 * **Automate the full-stack web development lifecycle** using Agentic AI.
 * **Replace traditional sequential development steps** (wireframing, mockups, API design, coding) with **dedicated AI agents** for each phase.
 * **Enable seamless end-to-end project creation** and **automatic documentation updates**.
+* **Used Azure MCP Servers** for simplified provisioning of Azure Resources. 
+
+## 🔍 Benefits
+
+* **Rapid generation** of modular full-stack codebases(frontend, backend, tests) leveraging AI models.
+* The code can be scaled up into an **end to end full fledged application** by connecting to the appropriate database and by improving the frontend.
+* **AI-Powered documentation** with line-by-line code explanations.
+* **Customizable prompts** and agent nodes for tailored development workflows.
+* **Easy-to-use** interface for project creation, updates, and downloads.
 
 ---
 
@@ -111,10 +123,17 @@ Agentic_AI_Web_Development/
 
 * This is a **self-experimented prototype**, showcasing the potential of AI-driven development workflows.
 * The goal is to explore **how multiple AI agents can collaborate** to automate different stages of the software lifecycle.
+* To expplore **Azure MCP Server**, refer to [https://learn.microsoft.com/en-us/azure/developer/azure-mcp-server/get-started/tools/cursor]
 * Contributions, suggestions, and discussions are welcome!
 
 ---
 
+## 🔍 Next Steps
+
+* **Experiment with prompt variations** in POML to improve agent performance and output quality
+
+
+---
 ## 🧑‍💻 Author
 
 **Raj Aditya Kumar**
@@ -129,6 +148,7 @@ Sr Data Engineer | Passionate about Data Engineering and Autonomous AI Systems
 
 
 ---
+
 
 
 
