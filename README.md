@@ -124,11 +124,12 @@ Sr Data Engineer | Passionate about Data Engineering and Autonomous AI Systems
 
 🌐 [Linkedin Profile](https://linkedin.com/in/rajadityakumar)
 
-🌐 [Github Repository](https://github.com/rajaditya-k))
+🌐 [Github Repository](https://github.com/rajaditya-k)
 
 
 
 ---
+
 
 
 
